@@ -1,0 +1,445 @@
+/* ================================
+   MUSE - ART STORE
+   ================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background-color: #f7f3ed;
+    color: #292421;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+}
+
+
+/* ================================
+   NAVIGATION
+   ================================ */
+
+header {
+    height: 82px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    background-color: #f7f3ed;
+    border-bottom: 1px solid #ded6cb;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: normal;
+    letter-spacing: 3px;
+    color: #5a1f2b;
+}
+
+nav {
+    display: flex;
+    gap: 38px;
+}
+
+nav a {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    color: #403b37;
+
+    position: relative;
+    transition: 0.3s ease;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 1px;
+    left: 0;
+    bottom: -6px;
+    background-color: #7a2938;
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    color: #7a2938;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+.nav-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.nav-buttons button {
+    padding: 11px 20px;
+
+    background-color: transparent;
+    color: #5a1f2b;
+
+    border: 1px solid #8c6b70;
+    border-radius: 30px;
+
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+
+    transition: 0.3s ease;
+}
+
+.nav-buttons button:hover {
+    background-color: #5a1f2b;
+    color: white;
+}
+
+
+/* ================================
+   HERO
+   ================================ */
+
+.hero {
+    min-height: 520px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 80px 20px;
+
+    background:
+        radial-gradient(circle at 20% 30%, #eadbd3 0%, transparent 28%),
+        radial-gradient(circle at 80% 70%, #ded0c7 0%, transparent 30%),
+        #eee8df;
+
+    position: relative;
+    overflow: hidden;
+}
+
+/* Decorative circles */
+
+.hero::before {
+    content: "";
+    width: 280px;
+    height: 280px;
+
+    border: 1px solid #b8a49b;
+    border-radius: 50%;
+
+    position: absolute;
+    top: -120px;
+    left: -100px;
+}
+
+.hero::after {
+    content: "";
+    width: 350px;
+    height: 350px;
+
+    border: 1px solid #b8a49b;
+    border-radius: 50%;
+
+    position: absolute;
+    bottom: -180px;
+    right: -120px;
+}
+
+.hero-content {
+    max-width: 750px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: 64px;
+    font-weight: normal;
+    line-height: 1.1;
+
+    color: #3b2528;
+
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-family: Arial, sans-serif;
+    font-size: 17px;
+    color: #655c57;
+
+    margin-bottom: 32px;
+}
+
+.hero-content button {
+    padding: 14px 35px;
+
+    background-color: #5a1f2b;
+    color: white;
+
+    border-radius: 30px;
+
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+
+    transition: 0.3s ease;
+}
+
+.hero-content button:hover {
+    background-color: #7a2938;
+    transform: translateY(-2px);
+}
+
+
+/* ================================
+   SECTION HEADINGS
+   ================================ */
+
+.categories h2,
+.products h2,
+.cart h2 {
+    font-size: 36px;
+    font-weight: normal;
+    color: #3b2528;
+
+    margin-bottom: 38px;
+
+    position: relative;
+}
+
+.categories h2::after,
+.products h2::after,
+.cart h2::after {
+    content: "";
+    display: block;
+
+    width: 45px;
+    height: 1px;
+
+    background-color: #8c6b70;
+
+    margin: 12px auto 0;
+}
+
+
+
+
+/* ================================
+   PRODUCTS SECTION
+   ================================ */
+
+.products {
+    padding: 90px 7%;
+
+    background-color: #ebe4dc;
+
+    text-align: center;
+}
+
+.product-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+
+    gap: 30px;
+
+    flex-wrap: wrap;
+}
+
+
+/* ================================
+   PRODUCT CARD
+   ================================ */
+
+.product-card {
+    width: 270px;
+
+    padding: 12px 12px 22px;
+
+    background-color: #faf8f4;
+
+    border: 1px solid #ddd3c8;
+
+    text-align: left;
+
+    box-shadow: 0 8px 25px rgba(60, 42, 35, 0.08);
+
+    transition: 0.4s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 15px 35px rgba(60, 42, 35, 0.15);
+}
+
+.product-card img {
+    width: 100%;
+    height: 300px;
+
+    object-fit: cover;
+
+    display: block;
+
+    filter: saturate(0.92);
+
+    transition: 0.4s ease;
+}
+
+.product-card:hover img {
+    filter: saturate(1);
+}
+
+
+/* Product information */
+
+.product-card h3 {
+    font-size: 19px;
+    font-weight: normal;
+
+    color: #3b2528;
+
+    margin: 18px 5px 5px;
+}
+
+.product-card p {
+    font-family: Arial, sans-serif;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    color: #7a2938;
+
+    margin: 0 5px 15px;
+}
+
+
+/* Add to cart */
+
+.product-card button {
+    width: calc(100% - 10px);
+
+    margin: 0 5px;
+
+    padding: 11px;
+
+    background-color: transparent;
+
+    color: #5a1f2b;
+
+    border: 1px solid #8c6b70;
+    border-radius: 3px;
+
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+
+    transition: 0.3s ease;
+}
+
+.product-card button:hover {
+    background-color: #5a1f2b;
+    color: white;
+}
+
+
+/* ================================
+   CART
+   ================================ */
+
+.cart {
+    padding: 90px 7%;
+
+    text-align: center;
+
+    background-color: #f7f3ed;
+}
+
+#cart-items {
+    max-width: 650px;
+
+    min-height: 50px;
+
+    margin: 0 auto 25px;
+
+    padding: 20px;
+
+    background-color: #eee6dd;
+
+    border: 1px solid #d8ccc0;
+}
+
+.cart h3 {
+    font-family: Arial, sans-serif;
+
+    font-size: 17px;
+    font-weight: normal;
+
+    margin: 20px;
+
+    color: #403b37;
+}
+
+#cart-total {
+    color: #7a2938;
+    font-weight: bold;
+}
+
+#checkout-btn {
+    padding: 13px 35px;
+
+    background-color: #5a1f2b;
+    color: white;
+
+    border-radius: 30px;
+
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+
+    transition: 0.3s ease;
+}
+
+#checkout-btn:hover {
+    background-color: #7a2938;
+    transform: translateY(-2px);
+}
+
+
+/* ================================
+   FOOTER
+   ================================ */
+
+footer {
+    padding: 35px 20px;
+
+    text-align: center;
+
+    background-color: #33272a;
+
+    color: #d9cfca;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+
+    letter-spacing: 0.5px;
+}
